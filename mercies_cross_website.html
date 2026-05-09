@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mercies Cross Ministries – Ironton, OH</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="mercies_cross_styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    Mercies Cross Ministries
+    <span>Ironton, Ohio</span>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ HOME PAGE ══════════ -->
+<div id="page-home" class="page active">
+
+  <div class="hero">
+    <img class="hero-img" src="data:image/jpeg;base64,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" alt="Mercies Cross Ministries church building with rainbow" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-title">Mercies Cross<br/>Ministries</h1>
+      <p class="hero-sub">A place of faith, family, and God's unfailing grace.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="showPage('about')">Our Story</button>
+        <button class="btn-outline" onclick="showPage('contact')">Get in Touch</button>
+      </div>
+      <p class="hero-verse">— Lamentations 3:22–23 · His mercies are new every morning —</p>
+    </div>
+  </div>
+
+  <div class="services-strip">
+    <p class="strip-label">Join Us for Worship</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <h3>Sunday School</h3>
+        <p>Sunday · 10:00 AM</p>
+      </div>
+      <div class="service-item">
+        <h3>Morning Worship</h3>
+        <p>Sunday · 11:00 AM</p>
+      </div>
+      <div class="service-item">
+        <h3>Evening Service</h3>
+        <p>Sunday · 6:00 PM</p>
+      </div>
+      <div class="service-item">
+        <h3>Wednesday Bible Study</h3>
+        <p>Wednesday · 7:00 PM</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="welcome">
+    <span class="section-tag">You Are Welcome Here</span>
+    <h2 class="section-title">Come As You Are</h2>
+    <div class="divider"></div>
+    <p class="section-body">
+      At Mercies Cross Ministries, everyone is welcome at the table. Whether you're a lifelong believer or just beginning to explore your faith, our doors are open and our community is here to walk alongside you. We are a congregation rooted in Scripture, fueled by love, and dedicated to serving our neighbors in Ironton and beyond.
+    </p>
+  </div>
+
+  <div class="values">
+    <div class="values-inner">
+      <span class="section-tag">What We Believe</span>
+      <h2 class="section-title">Built on the Word, Bound by Love</h2>
+      <div class="divider"></div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">✝️</div>
+          <h3>Faith</h3>
+          <p>Grounded in Scripture and the saving grace of Jesus Christ, our faith is the foundation of everything we do.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🙏</div>
+          <h3>Prayer</h3>
+          <p>We believe in the power of prayer — together and individually — as the heartbeat of a life surrendered to God.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Community</h3>
+          <p>We are family. A place where burdens are shared, joys are celebrated, and no one walks alone.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❤️</div>
+          <h3>Service</h3>
+          <p>Called to serve, we look outward — loving our neighbors and meeting needs in the Ironton community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Mercies Cross Ministries</strong> &nbsp;·&nbsp; Ironton, Ohio &nbsp;·&nbsp; All are welcome
+  </footer>
+</div>
+
+<!-- ══════════ ABOUT PAGE ══════════ -->
+<div id="page-about" class="page">
+
+  <div class="page-hero">
+    <h1>About Us</h1>
+    <p>Our story, our mission, and the people who call this place home.</p>
+  </div>
+
+  <div class="about-content">
+
+    <img class="about-photo" src="data:image/jpeg;base64,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" alt="Mercies Cross Ministries — Ironton, OH" />
+
+    <h2>Who We Are</h2>
+    <p>
+      Mercies Cross Ministries is a Spirit-filled, Bible-believing church located in the heart of Ironton, Ohio. We are a community of imperfect people seeking a perfect God — growing in faith together and living out the love of Jesus in our everyday lives.
+    </p>
+    <p>
+      Our name reflects the very heart of the Gospel: at the cross, God's mercies are fully revealed. We believe those mercies are not just a one-time gift, but a daily reality for every person who walks through our doors.
+    </p>
+
+    <div class="about-block">
+      <p>"The steadfast love of the Lord never ceases; his mercies never come to an end. They are new every morning; great is your faithfulness."</p>
+      <cite>— Lamentations 3:22–23</cite>
+    </div>
+
+    <h2>Our Mission</h2>
+    <p>
+      We exist to glorify God by making disciples, building community, and serving others. Our mission is simple: Love God. Love people. Make His name known in Ironton and beyond.
+    </p>
+    <p>
+      From Sunday worship and Wednesday Bible study to community outreach and prayer gatherings, everything we do flows from that central calling — to know Christ and to make Him known.
+    </p>
+
+    <h2>Our Community</h2>
+    <p>
+      Ironton is our home, and we take that seriously. We are neighbors, coworkers, friends, and family who have chosen to root our lives in this community and serve it faithfully. We believe the local church is one of God's greatest gifts to a neighborhood, and we strive to live up to that calling every day.
+    </p>
+    <p>
+      Whether you're new to the area, searching for a church home, or just curious what we're about — we'd love to meet you. Come as you are. You belong here.
+    </p>
+
+  </div>
+
+  <footer>
+    <strong>Mercies Cross Ministries</strong> &nbsp;·&nbsp; Ironton, Ohio &nbsp;·&nbsp; All are welcome
+  </footer>
+</div>
+
+<!-- ══════════ CONTACT PAGE ══════════ -->
+<div id="page-contact" class="page">
+
+  <div class="page-hero">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Reach out anytime.</p>
+  </div>
+
+  <div class="contact-layout">
+
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p class="lead">Have a question, prayer request, or want to learn more about our church? We'd love to connect. Don't hesitate to reach out.</p>
+
+      <div class="contact-detail">
+        <div class="icon">📍</div>
+        <div>
+          <h4>Location</h4>
+          <p>Ironton, Ohio</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">🕐</div>
+        <div>
+          <h4>Service Times</h4>
+          <p>
+            Sunday School · 10:00 AM<br/>
+            Morning Worship · 11:00 AM<br/>
+            Evening Service · 6:00 PM<br/>
+            Wednesday Bible Study · 7:00 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p>info@merciescross.org</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">📘</div>
+        <div>
+          <h4>Facebook</h4>
+          <p>Mercies Cross Ministries</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="First and last name" id="f-name"/>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com" id="f-email"/>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select id="f-subject">
+          <option value="">Select a topic…</option>
+          <option>General Question</option>
+          <option>Prayer Request</option>
+          <option>Visiting for the First Time</option>
+          <option>Volunteering</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Write your message here…" id="f-message"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm()">Send Message</button>
+      <div class="form-success" id="form-success">
+        ✓ Thank you! We'll be in touch with you soon. God bless you.
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <strong>Mercies Cross Ministries</strong> &nbsp;·&nbsp; Ironton, Ohio &nbsp;·&nbsp; All are welcome
+  </footer>
+</div>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    document.getElementById('nav-' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function submitForm() {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const msg = document.getElementById('f-message').value.trim();
+    if (!name || !email || !msg) {
+      alert('Please fill in your name, email, and message.');
+      return;
+    }
+    document.getElementById('form-success').style.display = 'block';
+    ['f-name','f-email','f-subject','f-message'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el.tagName === 'SELECT') el.selectedIndex = 0;
+      else el.value = '';
+    });
+  }
+</script>
+</body>
+</html>
