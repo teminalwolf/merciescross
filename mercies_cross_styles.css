@@ -582,9 +582,13 @@ footer strong {
 }
 
 /* ── CONTACT IMAGE ── */
+.contact-image {
+  max-width: 400px;
+}
+
 .contact-image img {
   width: 100%;
-  max-height: 500px;
+  max-height: 400px;
   object-fit: cover;
   border: 4px solid var(--cream);
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
