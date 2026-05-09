@@ -430,6 +430,7 @@ nav {
 /* ══════════════════════════════════════════
    CONTACT PAGE
    ══════════════════════════════════════════ */
+/* ── CONTACT IMAGE ── */
 .contact-layout {
   max-width: 1000px;
   margin: 4.5rem auto;
@@ -437,7 +438,20 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: start;
+  align-items: stretch;
+}
+
+.contact-image {
+  width: 100%;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 4px solid var(--cream);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
 
 @media (max-width: 680px) {
@@ -485,81 +499,7 @@ nav {
   line-height: 1.6;
 }
 
-.contact-form h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: var(--deep);
-  margin-bottom: 1.4rem;
-}
 
-/* ── FORM ELEMENTS ── */
-.form-group {
-  margin-bottom: 1.2rem;
-}
-
-.form-group label {
-  display: block;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--slate);
-  margin-bottom: 0.45rem;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border);
-  background: var(--warm-white);
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  color: var(--deep);
-  outline: none;
-  transition: border-color 0.2s;
-  border-radius: 2px;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  border-color: var(--gold);
-}
-
-.form-group textarea { resize: vertical; min-height: 120px; }
-
-.form-submit {
-  width: 100%;
-  background: var(--deep);
-  color: #fff;
-  border: none;
-  padding: 0.9rem;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.2s;
-  border-radius: 2px;
-  margin-top: 0.5rem;
-}
-
-.form-submit:hover { background: var(--gold); }
-
-.form-success {
-  display: none;
-  background: #eaf6ed;
-  border: 1px solid #8dca9b;
-  padding: 1rem 1.2rem;
-  border-radius: 2px;
-  font-family: 'Lora', serif;
-  color: #2d6a3f;
-  font-size: 0.95rem;
-  margin-top: 1rem;
-}
 
 /* ══════════════════════════════════════════
    FOOTER
@@ -581,15 +521,3 @@ footer strong {
   font-weight: 600;
 }
 
-/* ── CONTACT IMAGE ── */
-.contact-image {
-  max-width: 400px;
-}
-
-.contact-image img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border: 4px solid var(--cream);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-}
