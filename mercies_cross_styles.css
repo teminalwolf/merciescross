@@ -2,7 +2,7 @@
    MERCIES CROSS MINISTRIES — Stylesheet
    Ironton, Ohio
    ══════════════════════════════════════════ */
-
+ 
 /* ── CSS VARIABLES ── */
 :root {
   --cream: #fdf6ec;
@@ -15,10 +15,10 @@
   --border: #e8ddd0;
   --section-bg: #f5ede0;
 }
-
+ 
 /* ── RESET ── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
 /* ── BASE ── */
 body {
   font-family: 'Lora', serif;
@@ -26,7 +26,12 @@ body {
   color: var(--deep);
   min-height: 100vh;
 }
-
+ 
+/* ── PAGE WRAPPER ── */
+.page {
+  padding-top: 64px;
+}
+ 
 /* ══════════════════════════════════════════
    NAV
    ══════════════════════════════════════════ */
@@ -43,7 +48,7 @@ nav {
   height: 64px;
   border-bottom: 1px solid rgba(200,146,42,0.3);
 }
-
+ 
 .nav-logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
@@ -51,7 +56,7 @@ nav {
   letter-spacing: 0.03em;
   line-height: 1.2;
 }
-
+ 
 .nav-logo span {
   display: block;
   font-size: 0.65rem;
@@ -62,13 +67,13 @@ nav {
   text-transform: uppercase;
   margin-top: 1px;
 }
-
+ 
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
-
+ 
 .nav-links a {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -82,19 +87,13 @@ nav {
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
 }
-
+ 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--gold-light);
   border-bottom-color: var(--gold-light);
 }
-
-/* ══════════════════════════════════════════
-   PAGE SYSTEM
-   ══════════════════════════════════════════ */
-.page { display: none; padding-top: 64px; }
-.page.active { display: block; }
-
+ 
 /* ══════════════════════════════════════════
    HOME — HERO
    ══════════════════════════════════════════ */
@@ -107,7 +106,7 @@ nav {
   align-items: center;
   justify-content: center;
 }
-
+ 
 .hero-img {
   position: absolute;
   inset: 0;
@@ -116,7 +115,7 @@ nav {
   object-position: center 40%;
   filter: brightness(0.55);
 }
-
+ 
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -127,7 +126,7 @@ nav {
     rgba(26,34,53,0.75) 100%
   );
 }
-
+ 
 .hero-content {
   position: relative;
   text-align: center;
@@ -136,12 +135,12 @@ nav {
   max-width: 760px;
   animation: fadeUp 1.2s ease both;
 }
-
+ 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
+ 
 .hero-eyebrow {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -151,7 +150,7 @@ nav {
   color: var(--gold-light);
   margin-bottom: 1.2rem;
 }
-
+ 
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.4rem, 5vw, 4rem);
@@ -160,7 +159,7 @@ nav {
   margin-bottom: 1.2rem;
   text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
-
+ 
 .hero-sub {
   font-family: 'Lora', serif;
   font-style: italic;
@@ -169,7 +168,7 @@ nav {
   margin-bottom: 2.2rem;
   line-height: 1.6;
 }
-
+ 
 .hero-verse {
   font-family: 'Raleway', sans-serif;
   font-size: 0.78rem;
@@ -177,7 +176,7 @@ nav {
   color: var(--gold-light);
   opacity: 0.9;
 }
-
+ 
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -185,7 +184,11 @@ nav {
   flex-wrap: wrap;
   margin-bottom: 1.8rem;
 }
-
+ 
+.hero-buttons a {
+  text-decoration: none;
+}
+ 
 /* ── BUTTONS ── */
 .btn-primary {
   background: var(--gold);
@@ -201,9 +204,9 @@ nav {
   transition: background 0.2s, transform 0.15s;
   border-radius: 2px;
 }
-
+ 
 .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-
+ 
 .btn-outline {
   background: transparent;
   color: #fff;
@@ -218,9 +221,9 @@ nav {
   transition: border-color 0.2s, color 0.2s;
   border-radius: 2px;
 }
-
+ 
 .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
-
+ 
 /* ══════════════════════════════════════════
    HOME — SERVICE TIMES STRIP
    ══════════════════════════════════════════ */
@@ -230,7 +233,7 @@ nav {
   padding: 2.8rem 2rem;
   text-align: center;
 }
-
+ 
 .strip-label {
   font-family: 'Raleway', sans-serif;
   font-size: 0.7rem;
@@ -239,28 +242,28 @@ nav {
   color: var(--gold);
   margin-bottom: 1.6rem;
 }
-
+ 
 .services-grid {
   display: flex;
   justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
 }
-
+ 
 .service-item h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   color: var(--gold-light);
   margin-bottom: 0.3rem;
 }
-
+ 
 .service-item p {
   font-family: 'Raleway', sans-serif;
   font-size: 0.82rem;
   color: rgba(255,255,255,0.65);
   letter-spacing: 0.05em;
 }
-
+ 
 /* ══════════════════════════════════════════
    HOME — WELCOME SECTION
    ══════════════════════════════════════════ */
@@ -270,7 +273,7 @@ nav {
   padding: 0 2rem;
   text-align: center;
 }
-
+ 
 .section-tag {
   font-family: 'Raleway', sans-serif;
   font-size: 0.7rem;
@@ -280,7 +283,7 @@ nav {
   margin-bottom: 1rem;
   display: block;
 }
-
+ 
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -288,20 +291,20 @@ nav {
   line-height: 1.25;
   margin-bottom: 1.4rem;
 }
-
+ 
 .section-body {
   font-size: 1.05rem;
   color: var(--slate);
   line-height: 1.85;
 }
-
+ 
 .divider {
   width: 48px;
   height: 2px;
   background: var(--gold);
   margin: 1.8rem auto;
 }
-
+ 
 /* ══════════════════════════════════════════
    HOME — VALUES
    ══════════════════════════════════════════ */
@@ -309,45 +312,45 @@ nav {
   background: var(--section-bg);
   padding: 5rem 2rem;
 }
-
+ 
 .values-inner {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
-
+ 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem;
   margin-top: 3rem;
 }
-
+ 
 .value-card {
   background: var(--warm-white);
   padding: 2.2rem 1.8rem;
   border-top: 3px solid var(--gold);
   text-align: center;
 }
-
+ 
 .value-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
+ 
 .value-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   color: var(--deep);
   margin-bottom: 0.7rem;
 }
-
+ 
 .value-card p {
   font-size: 0.92rem;
   color: var(--slate);
   line-height: 1.75;
 }
-
+ 
 /* ══════════════════════════════════════════
    ABOUT PAGE
    ══════════════════════════════════════════ */
@@ -357,41 +360,41 @@ nav {
   text-align: center;
   color: #fff;
 }
-
+ 
 .page-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--gold-light);
   margin-bottom: 0.8rem;
 }
-
+ 
 .page-hero p {
   font-family: 'Lora', serif;
   font-style: italic;
   color: rgba(255,255,255,0.7);
   font-size: 1rem;
 }
-
+ 
 .about-content {
   max-width: 860px;
   margin: 4.5rem auto;
   padding: 0 2rem;
 }
-
+ 
 .about-content h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.7rem;
   color: var(--deep);
   margin-bottom: 1rem;
 }
-
+ 
 .about-content p {
   font-size: 1rem;
   color: var(--slate);
   line-height: 1.85;
   margin-bottom: 1.4rem;
 }
-
+ 
 .about-photo {
   width: 100%;
   max-width: 680px;
@@ -400,21 +403,21 @@ nav {
   border: 4px solid var(--cream);
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
-
+ 
 .about-block {
   background: var(--section-bg);
   border-left: 4px solid var(--gold);
   padding: 1.6rem 1.8rem;
   margin: 2.5rem 0;
 }
-
+ 
 .about-block p {
   font-style: italic;
   font-size: 1.08rem;
   color: var(--slate);
   margin: 0;
 }
-
+ 
 .about-block cite {
   display: block;
   font-style: normal;
@@ -424,13 +427,10 @@ nav {
   color: var(--gold);
   margin-top: 0.7rem;
 }
-
-
-
+ 
 /* ══════════════════════════════════════════
    CONTACT PAGE
    ══════════════════════════════════════════ */
-/* ── CONTACT IMAGE ── */
 .contact-layout {
   max-width: 1000px;
   margin: 4.5rem auto;
@@ -440,50 +440,37 @@ nav {
   gap: 4rem;
   align-items: stretch;
 }
-
-.contact-image {
-  width: 100%;
-}
-
-.contact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border: 4px solid var(--cream);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-}
-
+ 
 @media (max-width: 680px) {
   .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
 }
-
+ 
 .contact-info h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   color: var(--deep);
   margin-bottom: 0.6rem;
 }
-
+ 
 .contact-info p.lead {
   color: var(--slate);
   line-height: 1.75;
   margin-bottom: 2rem;
 }
-
+ 
 .contact-detail {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
   margin-bottom: 1.5rem;
 }
-
+ 
 .contact-detail .icon {
   font-size: 1.2rem;
   margin-top: 2px;
   flex-shrink: 0;
 }
-
+ 
 .contact-detail h4 {
   font-family: 'Raleway', sans-serif;
   font-size: 0.7rem;
@@ -492,15 +479,38 @@ nav {
   color: var(--gold);
   margin-bottom: 0.25rem;
 }
-
+ 
 .contact-detail p {
   font-size: 0.95rem;
   color: var(--slate);
   line-height: 1.6;
 }
-
-
-
+ 
+.contact-detail a {
+  font-size: 0.95rem;
+  color: var(--slate);
+  line-height: 1.6;
+  text-decoration: none;
+}
+ 
+.contact-detail a:hover {
+  color: var(--gold);
+}
+ 
+/* ── CONTACT IMAGE ── */
+.contact-image {
+  width: 100%;
+}
+ 
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 4px solid var(--cream);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+ 
 /* ══════════════════════════════════════════
    FOOTER
    ══════════════════════════════════════════ */
@@ -515,9 +525,8 @@ footer {
   margin-top: 4rem;
   border-top: 1px solid rgba(200,146,42,0.2);
 }
-
+ 
 footer strong {
   color: var(--gold-light);
   font-weight: 600;
 }
-
