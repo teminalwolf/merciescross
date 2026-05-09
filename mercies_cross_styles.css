@@ -530,21 +530,22 @@ footer strong {
   color: var(--gold-light);
   font-weight: 600;
 }
+
 @media (max-width: 480px) {
   .nav-logo {
-    font-size: 0.85rem;
+    display: none;
   }
 
-  .nav-logo span {
-    font-size: 0.55rem;
+  nav {
+    justify-content: center;
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .nav-links a {
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
   }
 }
