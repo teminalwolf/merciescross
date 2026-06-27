@@ -403,6 +403,55 @@ nav {
   border: 4px solid var(--cream);
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
+.pastor-photos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin: 2.5rem auto;
+}
+
+.pastor-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 220px;
+}
+
+.pastor-photo-wrap.center {
+  max-width: 260px;
+}
+
+.pastor-photo-wrap img {
+  width: 100%;
+  border: 4px solid var(--cream);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  display: block;
+}
+
+.pastor-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .pastor-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pastor-photo-wrap,
+  .pastor-photo-wrap.center {
+    max-width: 280px;
+    width: 100%;
+  }
+}
  
 .about-block {
   background: var(--section-bg);
