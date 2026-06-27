@@ -445,6 +445,7 @@ nav {
   color: var(--gold);
   margin-top: 0.75rem;
   text-align: center;
+  white-space: nowrap;
 }
 
 @media (max-width: 600px) {
